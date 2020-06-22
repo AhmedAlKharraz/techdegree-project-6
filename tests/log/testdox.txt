@@ -1,9 +1,5 @@
-Listing Basic
- [x] Data is set
- [x] Id is set
- [x] Title is set
- [x] Ensure object is created
- [x] Get status return basic
- [x] Get method for each property returning the expected
- [x] To array method return array
+Listing Image
+ [ ] No image
+ [ ] Full path image
+ [ ] Build path image
 
