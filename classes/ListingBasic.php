@@ -167,6 +167,31 @@ class ListingBasic
         $this->status = trim(filter_var($value, FILTER_SANITIZE_STRING));
     }
 
+    public function getImage(){
+
+        if(empty($this->image)){
+            return false;
+        }else{
+            return $this->image;
+        }
+    }
+
+    public function setImage($value){
+
+        $value = trim(filter_var($value, FILTER_SANITIZE_STRING));
+
+        if(empty($value)){
+            $this->image = null;
+            return;
+        }
+
+        if (substr($value, 0, 4) != 'http') {
+            $value = BASE_URL . '/' . $value;
+        }
+        $this->image = $value;
+
+    }
+    
     /**
      * Convert the current object to an associative array of parameters
      * @return array of object parameters
